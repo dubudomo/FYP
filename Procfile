@@ -1,0 +1,1 @@
+web: sh setup.sh && streamlit run deploy_SVM.py
