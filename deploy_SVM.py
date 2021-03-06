@@ -54,11 +54,11 @@ def predict(sentence):
             pred_df['sentiment'].iloc[i] = "negative"
     return pred_df
 
+st.title("Sentiment Analysis in Product Review")
 
 st.write("Please input a sentence here")
 user_input = st.text_area("Hit CTRL+Enter to run", "This is an amazing product")
 df = predict(user_input)
-st.title("Sentiment Analysis in Product Review")
 st.write("The final output sentiment")
 st.dataframe(df['sentiment'].value_counts(normalize=True).mul(100).round(1).astype(str) + '%'
 )
